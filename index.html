@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Finger Counter (Web)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./styles.css" />
+	<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Finger Counter</h1>
+		<div class="video-wrap">
+			<video class="input_video" playsinline></video>
+			<canvas class="output_canvas"></canvas>
+			<div class="overlay">
+				<div class="counter" id="totalCounter">Total: 0</div>
+				<div class="perhand" id="perHand"></div>
+			</div>
+		</div>
+		<div class="tips">
+			<p>Allow camera permission. Hold your hand in frame with good lighting.</p>
+		</div>
+		<div class="actions">
+			<button id="startBtn">Start</button>
+			<button id="stopBtn">Stop</button>
+		</div>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+</html>
+
+
